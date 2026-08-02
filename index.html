@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelangkaan BBM Pontianak | Analisis Mendalam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= PRELOADER ================= -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="pump">
+                <i class="fas fa-gas-pump"></i>
+            </div>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+            <p>Memuat Konten...</p>
+        </div>
+    </div>
+
+    <!-- ================= SCROLL PROGRESS ================= -->
+    <div class="scroll-progress"></div>
+
+    <!-- ================= CUSTOM CURSOR ================= -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- ================= PARTICLES CANVAS ================= -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gas-pump"></i>
+                </div>
+                <span class="logo-text">BBM<span class="highlight">Pontianak</span></span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#kronologi" class="nav-link">Kronologi</a></li>
+                <li><a href="#tesis" class="nav-link">Tesis</a></li>
+                <li><a href="#argumentasi" class="nav-link">Argumentasi</a></li>
+                <li><a href="#grafik" class="nav-link">Grafik</a></li>
+                <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                <li><a href="#kesimpulan" class="nav-link">Kesimpulan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+        <div class="hero-video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video">
+    <source src="assets/video/spbu-pontianak.mp4" type="video/mp4">
+</video>
+            <div class="hero-overlay"></div>
+            <div class="hero-noise"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                <i class="fas fa-circle-exclamation"></i>
+                <span>Laporan Investigasi</span>
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="400">
+                <span class="typing-text"></span>
+                <span class="cursor-blink">|</span>
+            </h1>
+            <p class="hero-desc" data-aos="fade-up" data-aos-delay="600">
+                Analisis mendalam mengenai penyebab, dampak, dan solusi kelangkaan 
+                Pertalite di Kota Pontianak dan Kabupaten Kubu Raya.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="800">
+                <a href="#kronologi" class="btn btn-primary">
+                    <span>Mulai Membaca</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+                <a href="#grafik" class="btn btn-outline">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Lihat Data</span>
+                </a>
+            </div>
+            <div class="hero-stats-row" data-aos="fade-up" data-aos-delay="1000">
+                <div class="h-stat">
+                    <span class="h-num" data-target="12">0</span>
+                    <span class="h-label">SPBU Terdampak</span>
+                </div>
+                <div class="h-stat">
+                    <span class="h-num" data-target="7">0</span>
+                    <span class="h-label">Hari Kelangkaan</span>
+                </div>
+                <div class="h-stat">
+                    <span class="h-num" data-target="1000">0</span>
+                    <span class="h-label">+ Kendaraan Mengantre</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ================= STATS BAR ================= -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                <i class="fas fa-gas-pump"></i>
+                <div class="stat-info">
+                    <span class="stat-number" data-target="45000">0</span>
+                    <span class="stat-suffix">+</span>
+                    <p>Liter Defisit Harian</p>
+                </div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-users"></i>
+                <div class="stat-info">
+                    <span class="stat-number" data-target="85">0</span>
+                    <span class="stat-suffix">%</span>
+                    <p>Masyarakat Terdampak</p>
+                </div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-clock"></i>
+                <div class="stat-info">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-suffix">jam</span>
+                    <p>Rata-rata Antrean</p>
+                </div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-route"></i>
+                <div class="stat-info">
+                    <span class="stat-number" data-target="120">0</span>
+                    <span class="stat-suffix">km</span>
+                    <p>Jalur Distribusi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KRONOLOGI ================= -->
+    <section class="kronologi" id="kronologi">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Timeline</span>
+            <h2>Kronologi Singkat</h2>
+            <p>Rangkaian peristiwa kelangkaan BBM dari awal hingga eskalasi</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Musim Kemarau</span>
+                    <h3>Debit Sungai Menurun</h3>
+                    <p>Debit Sungai Kapuas mengalami penurunan drastis akibat musim kemarau panjang, menyebabkan pendangkalan alur pelayaran.</p>
+                    <div class="timeline-img">
+                        <img src="assets/image/kapuas.jpeg" alt="Sungai Surut">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Hari Ke-3</span>
+                    <h3>Kapal Tanker Terlambat</h3>
+                    <p>Kapal tanker pengangkut Pertalite tidak dapat berlayar normal karena kedalaman sungai yang tidak memadai.</p>
+                    <div class="timeline-img">
+                        <img src="assets/image/tanker.jpeg" alt="Kapal Tanker">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot">
+                    <i class="fas fa-gas-pump"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Hari Ke-5</span>
+                    <h3>Pasokan Terhambat</h3>
+                    <p>Pasokan Pertalite ke berbagai SPBU di Pontianak dan Kubu Raya terlambat hingga 3-5 hari dari jadwal.</p>
+                    <div class="timeline-img">
+                        <img src="assets/image/pasokan.jpeg" alt="SPBU">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">Hari Ke-7</span>
+                    <h3>Antrean Panjang Mengular</h3>
+                    <p>Masyarakat mulai mengantre panjang di berbagai SPBU. Beberapa lokasi antrean mengular hingga 2 kilometer.</p>
+                    <div class="timeline-img">
+                        <img src="assets/image/mengantre.jpeg" alt="Antrean">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESIS ================= -->
+    <section class="tesis" id="tesis">
+        <div class="tesis-bg-elements">
+            <div class="tesis-circle c1"></div>
+            <div class="tesis-circle c2"></div>
+        </div>
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Pernyataan Utama</span>
+            <h2>Tesis</h2>
+        </div>
+        <div class="tesis-container" data-aos="zoom-in" data-aos-delay="200">
+            <div class="tesis-card-main">
+                <div class="tesis-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="tesis-content">
+                    <p class="tesis-quote">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        Kelangkaan Bahan Bakar Minyak (BBM) jenis Pertalite yang melanda Kota Pontianak dan Kabupaten Kubu Raya beberapa hari terakhir kembali memicu antrean kendaraan yang mengular di berbagai Stasiun Pengisian Bahan Bakar Umum (SPBU). Pihak PT Pertamina Patra Niaga Kalbar berargumen bahwa kepanikan ini murni disebabkan oleh faktor alam, yakni keterlambatan kapal tanker pembawa pasokan akibat menyusutnya debit air Sungai Kapuas selama musim kemarau.
+                    </p>
+                    <p class="tesis-highlight">
+                        Namun, mengambinghitamkan fenomena alam tahunan sebagai penyebab tunggal kelangkaan energi mencerminkan <span class="text-glow">rapuhnya sistem mitigasi risiko</span> dan manajemen distribusi logistik Pertamina di wilayah Kalimantan Barat.
+                    </p>
+                </div>
+                <div class="tesis-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ARGUMENTASI ================= -->
+    <section class="argumentasi" id="argumentasi">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Analisis</span>
+            <h2>Argumentasi</h2>
+            <p>Tiga pilar analisis mendalam terkait kelangkaan BBM</p>
+        </div>
+        <div class="argument-grid">
+            <div class="argument-card" data-tilt data-aos="fade-up" data-aos-delay="0">
+                <div class="card-shine"></div>
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Kelemahan Mitigasi Risiko Cuaca</h3>
+                    <p>
+                        Pendangkalan alur Sungai Kapuas bukanlah fenomena baru yang datang tiba-tiba, melainkan siklus musim kemarau yang dapat diprediksi secara meteorologis. Mengandalkan satu moda transportasi sungai utama tanpa ketersediaan cadangan strategis (buffer stock) yang kokoh di Depo Siantan menunjukkan kurangnya kesiapan Pertamina menghadapi dinamika alam. Ketika satu kapal tanker pengangkut sekitar 3.300 kiloliter Pertalite tertahan akibat air surut, efek domino kelangkaan langsung melumpuhkan SPBU pinggiran kota dalam hitungan jam.
+                    </p>
+                    <div class="card-footer">
+                        <span class="tag">Risiko</span>
+                        <span class="tag">Cuaca</span>
+                    </div>
+                </div>
+            </div>
+
+           <div class="argument-card" data-tilt data-aos="fade-up" data-aos-delay="150">
+                <div class="card-shine"></div>
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Dampak Nyata bagi Produktivitas Daerah</h3>
+                    <p>
+                        Kelangkaan pasokan BBM ini terbukti memberikan pukulan telak bagi roda ekonomi masyarakat lokal. Seperti yang disuarakan oleh kelompok pekerja melalui KSBSI Kalbar, terhentinya distribusi bensin mengganggu mobilitas kaum buruh, menaikkan ongkos transportasi eceran, serta menurunkan produktivitas harian secara signifikan. Infrastruktur energi semestinya menjadi urat nadi yang stabil, bukan variabel tak pasti yang menyandera aktivitas harian warga.
+                    </p>
+                    <div class="card-footer">
+                        <span class="tag">Ekonomi</span>
+                        <span class="tag">Sosial</span>
+                    </div>
+                </div>
+            </div>
+
+           <div class="argument-card" data-tilt data-aos="fade-up" data-aos-delay="300">
+                <div class="card-shine"></div>
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <h3>Persoalan Sistemik di Sektor Hilir</h3>
+                    <p>
+                        Masalah ini kian diperparah oleh celah pengawasan di tingkat hilir. Keterlambatan logistik di hulu kerap dimanfaatkan oleh para spekulan untuk melakukan aksi panic buying dan penimbunan. Pengungkapan kasus oleh Polresta Pontianak yang mengamankan hingga 500 liter Pertalite ilegal di sekitar SPBU Kota Baru membuktikan bahwa gangguan suplai sekecil apa pun akan selalu dieksploitasi oleh mafia BBM bersubsidi. Oleh karena itu, klaim bahwa stok di depo "aman" menjadi tidak sinkron ketika realitas di lapangan menunjukkan tangki-tangki SPBU yang kosong melompong.
+                    </p>
+                    <div class="card-footer">
+                        <span class="tag">Sistem</span>
+                        <span class="tag">Pengawasan</span>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ================= GRAFIK PENYEBAB ================= -->
+    <section class="grafik" id="grafik">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Data Visual</span>
+            <h2>Grafik Penyebab Kelangkaan</h2>
+            <p>Kontribusi faktor-faktor penyebab berdasarkan analisis lapangan</p>
+        </div>
+        <div class="grafik-container">
+            <div class="grafik-main" data-aos="fade-right">
+                <div class="chart-wrapper">
+                    <canvas id="penyebabChart"></canvas>
+                    <div class="chart-center-text">
+                        <span class="cct-num">100%</span>
+                        <span class="cct-label">Total Faktor</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grafik-legend" data-aos="fade-left">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff9800;"></div>
+                    <div class="legend-info">
+                        <h4>Surutnya Sungai Kapuas</h4>
+                        <p>Fenomena alam musiman yang menghambat kapal tanker</p>
+                        <span class="legend-percent">35%</span>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff5722;"></div>
+                    <div class="legend-info">
+                        <h4>Lemahnya Buffer Stock</h4>
+                        <p>Kurangnya cadangan BBM di depo penyimpanan</p>
+                        <span class="legend-percent">25%</span>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #2196f3;"></div>
+                    <div class="legend-info">
+                        <h4>Jalur Distribusi Tunggal</h4>
+                        <p>Ketergantungan pada satu jalur sungai tanpa alternatif</p>
+                        <span class="legend-percent">20%</span>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4caf50;"></div>
+                    <div class="legend-info">
+                        <h4>Panic Buying & Penimbunan</h4>
+                        <p>Perilaku masyarakat dan oknum saat krisis</p>
+                        <span class="legend-percent">12%</span>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #9c27b0;"></div>
+                    <div class="legend-info">
+                        <h4>Koordinasi Lemah</h4>
+                        <p>Komunikasi antar instansi yang kurang efektif</p>
+                        <span class="legend-percent">8%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GALERI ================= -->
+    <section class="galeri" id="galeri">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Dokumentasi</span>
+            <h2>Galeri Kejadian</h2>
+            <p>Momen-momen kelangkaan BBM yang terekam kamera</p>
+        </div>
+        <div class="galeri-grid">
+            <div class="galeri-item large" data-aos="zoom-in" data-aos-delay="0">
+                <img src="assets/image/mengantre.jpeg" alt="Antrean SPBU">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>Antrean Mengular</h4>
+                        <p>SPBU Pontianak, 2024</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="assets/image/macet.jpeg" alt="Kendaraan Mengantre">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>Kendaraan Roda Dua</h4>
+                        <p>Mengantre dengan jerigen</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/image/tanker.jpeg" alt="Kapal Tanker">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>Kapal Tanker</h4>
+                        <p>Terhambat di Sungai Kapuas</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri-item tall" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/image/tutup.jpeg" alt="Pom Bensin">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>SPBU Tutup</h4>
+                        <p>Stok Pertalite habis</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri-item" data-aos="zoom-in" data-aos-delay="400">
+                <img src="assets/image/kapuas.jpeg" alt="Sungai Kapuas">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>Sungai Kapuas</h4>
+                        <p>Debit air menurun drastis</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="galeri-item wide" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/image/macet.jpeg" alt="Jalan Pontianak">
+                <div class="galeri-overlay">
+                    <div class="galeri-info">
+                        <h4>Situasi Jalan</h4>
+                        <p>Kemacetan akibat antrean BBM</p>
+                    </div>
+                    <button class="galeri-zoom" onclick="openLightbox(this)">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= KESIMPULAN ================= -->
+    <section class="kesimpulan" id="kesimpulan">
+        <div class="kesimpulan-bg">
+            <div class="kb-circle"></div>
+            <div class="kb-circle"></div>
+        </div>
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">Penutup</span>
+            <h2>Kesimpulan & Solusi</h2>
+        </div>
+        <div class="kesimpulan-container">
+           <div class="kesimpulan-main" data-aos="fade-up">
+                <div class="kesimpulan-icon">
+                    <i class="fas fa-circle-check"></i>
+                </div>
+                <p class="kesimpulan-text">
+                    Pada akhirnya, alasan keterlambatan kapal akibat air surut <span class="highlight-text">tidak boleh lagi dijadikan tameng pembenaran atas kelangkaan BBM yang berulang di Pontianak</span>. Meskipun langkah respons cepat Pertamina dalam menyalurkan tambahan pasokan darat (build-up stock) patut diapresiasi, solusi jangka panjang tetap mutlak diperlukan. Pemerintah daerah dan BPH Migas harus mendesak Pertamina untuk segera memodernisasi manajemen distribusi, baik melalui pengerukan alur muara secara berkala, pemanfaatan jalur tangki darat alternatif secara permanen, hingga peningkatan kapasitas tampung depo penyimpanan. Menjamin kelancaran energi adalah tanggung jawab mutlak negara yang tidak boleh kalah oleh pasang surutnya air sungai.
+                </p>
+            </div>
+            <div class="solusi-grid">
+                <div class="solusi-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="solusi-num">01</div>
+                    <div class="solusi-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4>Pengerukan Alur Muara</h4>
+                    <p>Melakukan pengerukan alur Sungai Kapuas secara berkala untuk menjaga kedalaman pelayaran kapal tanker.</p>
+                </div>
+                <div class="solusi-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="solusi-num">02</div>
+                    <div class="solusi-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h4>Jalur Tangki Darat</h4>
+                    <p>Pemanfaatan jalur tangki darat alternatif secara permanen untuk mengurangi ketergantungan pada transportasi sungai.</p>
+                </div>
+                <div class="solusi-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="solusi-num">03</div>
+                    <div class="solusi-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h4>Kapasitas Depo</h4>
+                    <p>Peningkatan kapasitas tampung depo penyimpanan untuk memastikan cadangan BBM yang cukup selama periode kritis.</p>
+                </div>
+                <div class="solusi-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="solusi-num">04</div>
+                    <div class="solusi-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Modernisasi Distribusi</h4>
+                    <p>Memodernisasi manajemen distribusi BBM melalui koordinasi erat antara pemerintah daerah, BPH Migas, dan Pertamina.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-waves">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#0a1628" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>BBM<span class="highlight">Pontianak</span></span>
+                    </div>
+                    <p>Website analisis kelangkaan BBM di Pontianak dan Kubu Raya. Dibuat untuk tugas teks argumentasi.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#kronologi"><i class="fas fa-chevron-right"></i> Kronologi</a></li>
+                        <li><a href="#tesis"><i class="fas fa-chevron-right"></i> Tesis</a></li>
+                        <li><a href="#argumentasi"><i class="fas fa-chevron-right"></i> Argumentasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Lainnya</h4>
+                    <ul>
+                        <li><a href="#grafik"><i class="fas fa-chevron-right"></i> Grafik Data</a></li>
+                        <li><a href="#galeri"><i class="fas fa-chevron-right"></i> Galeri</a></li>
+                        <li><a href="#kesimpulan"><i class="fas fa-chevron-right"></i> Kesimpulan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Pontianak, Kalimantan Barat</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2024</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-book"></i>
+                        <span>Tugas Teks Argumentasi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with <i class="fas fa-heart"></i> untuk tugas sekolah. Semua gambar ilustrasi.</p>
+                <a href="#home" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-xmark"></i>
+        </button>
+        <button class="lightbox-nav prev" onclick="changeImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="" alt="Lightbox Image" id="lightbox-img">
+        <button class="lightbox-nav next" onclick="changeImage(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
